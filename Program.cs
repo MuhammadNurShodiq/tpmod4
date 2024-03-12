@@ -5,6 +5,7 @@ using static tpmod4_1302223054.Class1;
 
 
 using System;
+using static tpmod4_1302223054.Class2;
 
 public class MainClass
 {
@@ -48,6 +49,20 @@ public class MainClass
 
         string kodePosSamoja = kodePos.GetKodePos("Samoja");
         Console.WriteLine($"Kode pos Samoja: {kodePosSamoja}");
+
+        // Buat object dari class DoorMachine
+        DoorMachine doorMachine = new DoorMachine();
+
+        // Simulasi perubahan state
+        doorMachine.UnlockDoor();
+        doorMachine.LockDoor();
+        doorMachine.UnlockDoor();
+
+        // Dapatkan state pintu saat ini
+        DoorState state = doorMachine.GetState();
+
+        // Tampilkan state pintu saat ini
+        Console.WriteLine($"State pintu saat ini: {state}");
     }
 }
 
